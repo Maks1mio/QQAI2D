@@ -14,7 +14,7 @@ namespace QQAI2D
         {
             _image = imageBase64;
             _uploadsCount = uploadsCount;
-            _client = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
+            _client = new HttpClient { };
         }
 
         public async IAsyncEnumerable<string> GetConvertedImagesURL()

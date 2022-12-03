@@ -6,7 +6,7 @@
 
         public Downloader()
         {
-            _client = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
+            _client = new HttpClient { };
         }
 
         public async Task<byte[]> Save(string url)
