@@ -124,6 +124,7 @@ namespace QQAI2D_WinForms
                     photosSaver.Save(bytes);
                     number++;
                     UpdateProgressBar();
+                    //await Task.Delay(TimeSpan.FromSeconds(15));
                 }
             }
             catch { }

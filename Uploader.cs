@@ -19,15 +19,23 @@ namespace QQAI2D
 
         public async IAsyncEnumerable<string> GetConvertedImagesURL()
         {
-            var requestData = new RequestData(_image);
-
             for (int i = 0; i < _uploadsCount; i++)
             {
-                var responseMessage = await _client.PostAsJsonAsync("https://ai.tu.qq.com/trpc.shadow_cv.ai_processor_cgi.AIProcessorCgi/Process", requestData);
-                var responseStream = await responseMessage.Content.ReadAsStreamAsync();
-                var response = await JsonSerializer.DeserializeAsync<Response>(responseStream);
+                Response response;
+                do
+                {
+                    response = await ProcessImage();
+                } while (response.code != 0);
                 yield return JsonSerializer.Deserialize<Extra>(response.extra).URL;
             }
+        }
+
+        private async Task<Response> ProcessImage() 
+        {
+            var requestData = new RequestData(_image);
+            var responseMessage = await _client.PostAsJsonAsync("https://ai.tu.qq.com/trpc.shadow_cv.ai_processor_cgi.AIProcessorCgi/Process", requestData);
+            var responseStream = await responseMessage.Content.ReadAsStreamAsync();
+            return await JsonSerializer.DeserializeAsync<Response>(responseStream);
         }
 
         private class RequestData
