@@ -16,7 +16,8 @@
 
 - Перетащите изображение или несколько изображений в окно программы
 
-![explorer_HJMntbrT6B](https://user-images.githubusercontent.com/44835662/205439395-ffb41699-b42f-43d1-8caf-2f74caecfe25.gif)
+![explorer_IuGuAuN4R7](https://user-images.githubusercontent.com/44835662/205473224-d1d2f42e-24fd-4e3a-bcae-f146a3133541.gif)
+
 
 ## Статус
 
