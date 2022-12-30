@@ -2,7 +2,7 @@
   <img width="250" alt="QQAI2D" src="https://media.discordapp.net/attachments/566676757886009355/1048511533291950130/image.png?width=461&height=461">
 </p>
 
-# QQAI2D (Only face in the image)
+# QQAI2D (Abandoned)
 
 Простая программа для быстрой загрузки и обработки фотографий на бесплатном сайте [Different Dimension Me](https://h5.tu.qq.com/web/ai-2d/cartoon/index?parent_trace_id=0f9b936f-b87c-7752-3b0c-901efb418370&root_channel=qq_sousuo&current_channel=imageQRCode&level=12) от разработчиков китайской социальной сети QQ
 
